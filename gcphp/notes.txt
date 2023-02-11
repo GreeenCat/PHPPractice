@@ -1,0 +1,134 @@
+var_dump() => Dump tht data
+
+if($_server['REQUEST_METHOD']){
+
+
+
+}
+
+
+DBMS = DATA PULL,DATA PUSH AND UPDATE THE EQESTING DATA
+RDBMS 
+SQL IS THE MEDIUM TO COMMPUNICATE WITH OUR DATABSE //structured query language
+
+Data types is to be give  |
+                         \/  
+ Sr No. | Name | DOB   <-- Headers
+  1     | j    |  515
+  2     | m    |  8484     <-- Data
+  3     | k    |  8484
+
+//FASTER RETRIVAL FASTER UPDATION 
+example SELECT * FROM NAME WHERE DOB=8484
+
+  Each column has name and type
+
+
+
+
+  https://mega.nz/file/Pqp3FKgI#r8InLYXO4nAIyNcZqZFm7UqKrXZgGx8EC8yASGzN0Jo //Relation between SQL DATABSE AND PHP
+
+
+
+
+
+
+  A.I  = Auto increment
+
+
+connecting to database
+
+
+
+//ways to connect to my sql database
+
+// 1. MYSQLi extension  - procedural way,object oriented
+// 2. PDO = PHP DATA OBJECT 
+// PDO CAN WORK WITH MANY DATA BASE AND MYSQLi WORKS WITHIN MYSQLi DB
+
+
+//CONNECTING TO DATABASE
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+// create a connection
+$conn = mysqli_connect($servername,$username,$password);
+if(!$conn){
+    die("Sorry we failed to coonnect" . mysqli_connect_error());
+}
+else{
+    echo "Connection was successfull";
+}
+
+
+//creating db with php
+
+
+$server = 'localhost';
+$username = 'root';
+$password = '';
+
+$conn = mysqli_connect($server,$username,$password);
+echo "connection success";
+
+$sql = "CREATE DATABASE dbgreencat2";
+mysqli_query($conn,$sql);  ==> To run a sql query 
+
+
+//used to get number of rows
+$num= mysqli_num_rows($result);
+
+while ($row = mysqli_fetch_assoc($result)) {
+used to fetch the data
+
+
+
+//to check affected rows
+$aff = mysqli_affected_rows($conn);
+
+
+
+
+/////// to find top 3 data
+SELECT * FROM `contactsus` LIMIT 1; 
+
+
+
+/syntax to set a cookie
+setcookie("category","Books",time() + 86400,"/");
+
+
+sessions in php
+session_start();
+  $_SESSION['username'] = "madhav";
+
+$_SESSION['favcat'] = "samosa";
+echo "we have saved your session"; 
+
+
+
+togetdata
+session_start();
+
+
+
+if (isset($_SESSION['username'])) {
+    echo "welcome " . $_SESSION['username'];
+ echo "<br>";
+echo "your fav category is " . $_SESSION['favcat'];
+echo "we have saved your session"; 
+
+}
+
+else {
+    echo "plz login to continue";
+}
+
+
+tologout]
+
+session_start();
+session_unset();
+session_destroy();
+echo "tu logout thai gayo che "; 
